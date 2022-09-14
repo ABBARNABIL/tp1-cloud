@@ -18,7 +18,7 @@ def visit():  # put application's code here
         count = 0
     else:
         count = count[0]
-    cur.execute("UPDATE visits SET count = %s WHERE visit_id = 1", (count + 1,))
+    cur.execute("UPDATE visits SET count = %s", (count + 1,))
     conn.commit()
     return 'Hello World! I have been seen {} times.'.format(count)
 
